@@ -1,26 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UTg-YF-ofU">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Badges-->
+        <scene sceneID="thg-3u-cIg">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KABadges" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="n87-zK-PRJ" customClass="BadgeCollectionViewController" customModule="KABadges" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ufg-gi-je6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wmQ-18-xfZ">
+                            <size key="itemSize" width="90" height="90"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BadgeCell" id="0Ma-fE-J71" customClass="BadgeCollectionViewCell" customModule="KABadges" customModuleProvider="target">
+                                <rect key="frame" x="10" y="74" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7W3-qr-Aj8">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <animations/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="title" destination="7W3-qr-Aj8" id="nS9-5Q-MPe"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="n87-zK-PRJ" id="FFI-fy-uHu"/>
+                            <outlet property="delegate" destination="n87-zK-PRJ" id="tBc-eL-yDa"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Badges" id="LTj-N5-yT1"/>
+                    <connections>
+                        <segue destination="pgt-kK-fRS" kind="show" identifier="BadgeDetail" id="PA0-Zm-vbK"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9b-A2-hci" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1135" y="301"/>
+        </scene>
+        <!--Badge Detail View Controller-->
+        <scene sceneID="Vci-NR-FFH">
+            <objects>
+                <viewController id="pgt-kK-fRS" customClass="BadgeDetailViewController" customModule="KABadges" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ain-cG-dSv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hga-5H-ebI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qym-Um-umD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RiM-w4-Ziw">
+                                <rect key="frame" x="20" y="74" width="560" height="516"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PHS-tK-rOu">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="484.5"/>
+                                        <animations/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Running Workout Record" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IV3-ok-yYa">
+                                        <rect key="frame" x="0.0" y="484.5" width="560" height="17"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You earned this award for the most calories burned on a ride. 1,637 Calories burned on 10/21/15" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdu-qR-37h">
+                                        <rect key="frame" x="0.0" y="501.5" width="560" height="14.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="RiM-w4-Ziw" secondAttribute="trailing" id="F5A-Ia-1a6"/>
+                            <constraint firstItem="Hga-5H-ebI" firstAttribute="top" secondItem="RiM-w4-Ziw" secondAttribute="bottom" constant="10" id="Sej-EB-419"/>
+                            <constraint firstItem="RiM-w4-Ziw" firstAttribute="leading" secondItem="qym-Um-umD" secondAttribute="leadingMargin" id="uhc-il-r2y"/>
+                            <constraint firstItem="RiM-w4-Ziw" firstAttribute="top" secondItem="ain-cG-dSv" secondAttribute="bottom" constant="10" id="ywl-7x-GMY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Kdu-qR-37h" id="2Vf-TW-iSt"/>
+                        <outlet property="imageView" destination="PHS-tK-rOu" id="IQp-lS-kKw"/>
+                        <outlet property="titleLabel" destination="IV3-ok-yYa" id="Lsc-Oz-IRy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ec5-VY-N3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="301"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="amt-os-i5t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UTg-YF-ofU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Mp-QO-CQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n87-zK-PRJ" kind="relationship" relationship="rootViewController" id="Ly4-q6-W7d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1h4-RY-o6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="301"/>
         </scene>
     </scenes>
 </document>

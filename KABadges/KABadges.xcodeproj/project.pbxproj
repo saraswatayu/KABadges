@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AB733091C230C1F00B22404 /* BadgeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB733081C230C1F00B22404 /* BadgeCollectionViewController.swift */; };
+		2AB7330B1C231EFB00B22404 /* BadgeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7330A1C231EFB00B22404 /* BadgeCollectionViewCell.swift */; };
+		2AB7330D1C2321FB00B22404 /* BadgeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7330C1C2321FB00B22404 /* BadgeDetailViewController.swift */; };
+		2AB7330F1C2325A000B22404 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7330E1C2325A000B22404 /* Utilities.swift */; };
+		2AB733111C23338C00B22404 /* KABadges.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AB733101C23338C00B22404 /* KABadges.json */; };
 		2AE881D21C22813100B3C03D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE881D11C22813100B3C03D /* AppDelegate.swift */; };
 		2AE881D41C22813100B3C03D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE881D31C22813100B3C03D /* ViewController.swift */; };
 		2AE881D71C22813100B3C03D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE881D51C22813100B3C03D /* Main.storyboard */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AB733081C230C1F00B22404 /* BadgeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewController.swift; sourceTree = "<group>"; };
+		2AB7330A1C231EFB00B22404 /* BadgeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewCell.swift; sourceTree = "<group>"; };
+		2AB7330C1C2321FB00B22404 /* BadgeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeDetailViewController.swift; sourceTree = "<group>"; };
+		2AB7330E1C2325A000B22404 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2AB733101C23338C00B22404 /* KABadges.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KABadges.json; sourceTree = "<group>"; };
 		2AE881CE1C22813000B3C03D /* KABadges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KABadges.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE881D11C22813100B3C03D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE881D31C22813100B3C03D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +71,13 @@
 			isa = PBXGroup;
 			children = (
 				2AE881D11C22813100B3C03D /* AppDelegate.swift */,
+				2AB7330E1C2325A000B22404 /* Utilities.swift */,
 				2AE881D31C22813100B3C03D /* ViewController.swift */,
 				2AE881E61C2282B800B3C03D /* BadgeRequest.swift */,
+				2AB733101C23338C00B22404 /* KABadges.json */,
+				2AB733081C230C1F00B22404 /* BadgeCollectionViewController.swift */,
+				2AB7330C1C2321FB00B22404 /* BadgeDetailViewController.swift */,
+				2AB7330A1C231EFB00B22404 /* BadgeCollectionViewCell.swift */,
 				2AE881E81C22902900B3C03D /* Badge.swift */,
 				2AE881D51C22813100B3C03D /* Main.storyboard */,
 				2AE881DB1C22813100B3C03D /* Assets.xcassets */,
@@ -134,6 +149,7 @@
 				2AE881DF1C22813100B3C03D /* LaunchScreen.storyboard in Resources */,
 				2AE881DC1C22813100B3C03D /* Assets.xcassets in Resources */,
 				2AE881D71C22813100B3C03D /* Main.storyboard in Resources */,
+				2AB733111C23338C00B22404 /* KABadges.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,11 +160,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB733091C230C1F00B22404 /* BadgeCollectionViewController.swift in Sources */,
 				2AE881D41C22813100B3C03D /* ViewController.swift in Sources */,
 				2AE881E91C22902900B3C03D /* Badge.swift in Sources */,
 				2AE881E71C2282B800B3C03D /* BadgeRequest.swift in Sources */,
 				2AE881D21C22813100B3C03D /* AppDelegate.swift in Sources */,
+				2AB7330B1C231EFB00B22404 /* BadgeCollectionViewCell.swift in Sources */,
+				2AB7330F1C2325A000B22404 /* Utilities.swift in Sources */,
 				2AE881DA1C22813100B3C03D /* KABadges.xcdatamodeld in Sources */,
+				2AB7330D1C2321FB00B22404 /* BadgeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KABadges/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayushsaraswat.KABadges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -271,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KABadges/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayushsaraswat.KABadges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +318,7 @@
 				2AE881E51C22813100B3C03D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
