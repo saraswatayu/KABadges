@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D888E0206EFC1ACDC2CD25C2'
+               BlueprintIdentifier = '6BABF5F97503F9CAE42C3987'
                BlueprintName = 'Pods-KABadges'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_KABadges.framework'>
