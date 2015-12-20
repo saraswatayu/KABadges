@@ -1,0 +1,6 @@
+framework module Pods_KABadges {
+  umbrella header "Pods-KABadges-umbrella.h"
+
+  export *
+  module * { export * }
+}
